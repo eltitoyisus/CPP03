@@ -26,7 +26,7 @@ class ClapTrap
 
 		//getters and setters
 		std::string getName() const;
-		unsigned int setAttackDamage(unsigned int damage);
+		void setAttackDamage(unsigned int damage);
 		unsigned int getAttackDamage();
 	private:
 		std::string _name; // passed in the constturctor

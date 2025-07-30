@@ -12,6 +12,7 @@
 
 #ifndef CLAPTRAP_H
 # define CLAPTRAP_H
+# define HP 100
 
 #include <iostream>
 
@@ -29,7 +30,7 @@ class ClapTrap
 
 		//getters and setters
 		std::string getName() const;
-		unsigned int setAttackDamage(unsigned int damage);
+		void setAttackDamage(unsigned int damage);
 		unsigned int getAttackDamage();
 	protected:
 		std::string _name; // passed in the constturctor

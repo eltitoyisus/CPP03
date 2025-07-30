@@ -13,7 +13,7 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap("DefaultScav") {
-	std::cout << "🔨 ScavTrap default constructor called 🔨" << std::endl;
+	std::cout << "🔨 ScavTrap plain constructor called 🔨" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
@@ -47,5 +47,14 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::guardGate() {
+	if (_hitPoints <= 0) {
+		std::cout << "Blud is dead, he ain't doin that" << std::endl;
+		return;
+	}
+	if (_energyPoints <= 0) {
+		std::cout << "Let him rest!!! He has to recoves hes inner energy!!!!" << std::endl;
+		return ;
+	}
+	_energyPoints--;
 	std::cout << "🛡️ ScavTrap <" << _name << "> is now in Gate keeper mode 🛡️" << std::endl;
 }
